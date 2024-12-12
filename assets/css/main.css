@@ -660,7 +660,7 @@ input[type="radio"] + label:before {
 }
 
 .image img {
-    border-radius: 4px;
+    border-radius: 25px;
     display: block;
 }
 
@@ -686,12 +686,12 @@ input[type="radio"] + label:before {
 
 .image.fit {
     display: block;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     width: 100%;
 }
 
 .image.fit img {
-    width: 100%;
+    width: 70%;
 }
 
 .image.main {
@@ -1164,11 +1164,12 @@ button {
     -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
     -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
     transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-    background-image: url("../../images/quasar.jpg");
+    background-image: url("../../images/background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
+    filter: brightness(80%);
 }
 
 body.is-article-visible #bg:after {
@@ -1212,9 +1213,10 @@ body.is-preload #bg:before {
     z-index: 3;
 }
 
+
 #wrapper:before {
-    content: url(images/Me.jpg);
-    display: block;
+    content: '';  /* or just remove this entire block */
+    display: none;
 }
 
 @media screen and (max-width: 1680px) {
@@ -1277,7 +1279,7 @@ body.is-preload #bg:before {
     margin-top: 3.5rem;
 }
 
-#header > *:before {
+/*#header > *:before {
     content: '';
     display: block;
     position: absolute;
@@ -1286,6 +1288,11 @@ body.is-preload #bg:before {
     width: 1px;
     height: calc(3.5rem + 1px);
     background: #ffffff;
+}*/
+
+
+#header > *:before {
+    display: none;  /* This will hide all the vertical lines */
 }
 
 #header > :first-child {
